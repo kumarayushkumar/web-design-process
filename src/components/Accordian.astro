@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string
+  id: number
+}
+
+const { title, id } = Astro.props
+---
+
+<div
+  class={`accordion-item border-2 border-zinc-800 ${id === 0 ? '' : 'border-t-0'}`}
+  id={`accordian-${id} `}>
+  <input type="checkbox" class="hidden" id={`accordion-${id}`} />
+  <label
+    for={`accordion-${id}`}
+    class={`block py-4 px-6 font-medium hover:bg-orange-200 transition ease-in-out duration-[400ms]`}
+    ><div class="flex justify-between align-baseline">
+      <h3 class="text-lg">{`${id + 1}. ${title}`}</h3>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M6 9l6 6l6 -6"></path></svg
+      >
+    </div></label
+  >
+  <div
+    class={`accordion-content overflow-hidden max-h-[0] transition-[max-height] ease-in-out duration-[400ms]`}>
+    <slot />
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.accordion-item').forEach(item => {
+    const input = item.querySelector(
+      'input[type="checkbox"]'
+    ) as HTMLInputElement
+    const content = item.querySelector('.accordion-content')
+
+    if (input) {
+      input.addEventListener('change', () => {
+        if (input.checked) {
+          ;(content as HTMLElement).style.maxHeight =
+            content!.scrollHeight + 'px'
+        } else {
+          ;(content as HTMLElement).style.maxHeight = '0'
+        }
+      })
+    }
+  })
+</script>

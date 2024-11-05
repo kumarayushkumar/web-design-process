@@ -1,4 +1,4 @@
-const process = [
+export const process = [
   {
     title: 'Project Brief',
     description:

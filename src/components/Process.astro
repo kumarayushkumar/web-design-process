@@ -1,0 +1,82 @@
+---
+import { process } from '../data/process'
+import Accordian from './Accordian.astro'
+---
+
+<section class="mx-auto py-4 px-6 md:max-w-[800px]">
+  <h2 class="py-4 text-2xl font-semibold">The Process</h2>
+  <hr />
+  <div class="py-4">
+    {
+      process.map((item, index) => (
+        <Accordian title={item.title} id={index}>
+          <p class="pt-2 px-4 mb-4 md:mb-6">{item.description}</p>
+          {item.elements && (
+            <div class="pl-8">
+              {Object.entries(item.elements).map(([category, data], index) => (
+                <div id={String(index)} class="py-2">
+                  <h4 class="font-semibold capitalize text-lg">{category}</h4>
+                  {data.how && (
+                    <div class="py-2">
+                      <h5 class="italic font-medium">How</h5>
+                      <ul class="list-disc pl-6">
+                        {data.how.map(
+                          (
+                            link: { link: string; comment?: string },
+                            index: number
+                          ) => (
+                            <li id={`${category}-how-${index}`} class="py-1">
+                              <a
+                                href={link.link}
+                                target="_blank"
+                                class="text-blue-600 hover:underline">
+                                {link.link}
+                              </a>
+                              {link.comment && (
+                                <span class="text-gray-500 ml-2 italic">
+                                  ({link.comment})
+                                </span>
+                              )}
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  )}
+
+                  {data.where && (
+                    <div class="py-2">
+                      <h5 class="italic font-medium">Where</h5>
+                      <ul class="list-disc pl-6">
+                        {data.where.map(
+                          (
+                            link: { link: string; comment?: string },
+                            index: number
+                          ) => (
+                            <li id={`${category}-where-${index}`} class="py-1">
+                              <a
+                                href={link.link}
+                                target="_blank"
+                                class="text-blue-600 hover:underline">
+                                {link.link}
+                              </a>
+                              {link.comment && (
+                                <span class="text-gray-500 ml-2 italic">
+                                  ({link.comment})
+                                </span>
+                              )}
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </Accordian>
+      ))
+    }
+  </div>
+</section>
