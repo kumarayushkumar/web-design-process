@@ -3,14 +3,14 @@ import { process } from '../data/process'
 import Accordian from './Accordian.astro'
 ---
 
-<section class="mx-auto py-4 px-6 md:max-w-[800px]">
-  <h2 class="py-4 text-2xl font-semibold">The Process</h2>
+<section class="mx-auto py-4 px-4 md:max-w-[800px]">
+  <h2 class="py-2 text-2xl font-semibold">The Process</h2>
   <hr />
   <div class="py-4">
     {
       process.map((item, index) => (
         <Accordian title={item.title} id={index}>
-          <p class="pt-2 px-4 mb-4 md:mb-6">{item.description}</p>
+          <p class="pt-2 px-4 mb-4">{item.description}</p>
           {item.elements && (
             <div class="pl-8">
               {Object.entries(item.elements).map(([category, data], index) => (
@@ -19,13 +19,14 @@ import Accordian from './Accordian.astro'
                   {data.how && (
                     <div class="py-2">
                       <h5 class="italic font-medium">How</h5>
-                      <ul class="list-disc pl-6">
+                      <ul class="pl-2">
                         {data.how.map(
                           (
                             link: { link: string; comment?: string },
                             index: number
                           ) => (
                             <li id={`${category}-how-${index}`} class="py-1">
+                              -{' '}
                               <a
                                 href={link.link}
                                 target="_blank"
@@ -47,13 +48,14 @@ import Accordian from './Accordian.astro'
                   {data.where && (
                     <div class="py-2">
                       <h5 class="italic font-medium">Where</h5>
-                      <ul class="list-disc pl-6">
+                      <ul class="pl-2">
                         {data.where.map(
                           (
                             link: { link: string; comment?: string },
                             index: number
                           ) => (
                             <li id={`${category}-where-${index}`} class="py-1">
+                              <span>-</span>
                               <a
                                 href={link.link}
                                 target="_blank"
