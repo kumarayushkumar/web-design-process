@@ -1,5 +1,6 @@
 export const CONST = {
-  description: 'This is a description',
-  domain: 'webdesignprocess',
-  name: 'Web Design Process'
+  description:
+    'Simple step by step guide to UI design process with links to resources',
+  domain: 'uidesignprocess',
+  name: 'UI Design Process'
 }
