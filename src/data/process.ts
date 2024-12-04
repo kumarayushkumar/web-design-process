@@ -39,6 +39,7 @@ export const process = [
         ],
         where: [
           { link: 'https://palettemaker.com/' },
+          { link: 'https://coolors.co/' },
           { link: 'https://www.rapidtables.com/web/css/css-color.html' },
           { link: 'https://www.happyhues.co/palettes/4' },
           { link: 'https://colorhunt.co/' },
