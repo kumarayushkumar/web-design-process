@@ -66,8 +66,6 @@ export const process = [
           { link: 'https://www.fontspace.com/' },
           { link: 'https://www.myfonts.com/WhatTheFont/' },
           { link: 'https://www.fontspring.com/' },
-          { link: 'https://www.fontshop.com/' },
-          { link: 'https://www.fonts.com/' }
         ]
       },
       logo: {
