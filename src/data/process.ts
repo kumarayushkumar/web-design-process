@@ -58,6 +58,7 @@ export const process = [
         ],
         where: [
           { link: 'https://textfonts.net/' },
+          { link: 'https://www.fontmirror.com/' },
           { link: 'https://www.fontbrief.com/fontbrief' },
           { link: 'https://fontforge.org/en-US/' },
           { link: 'https://typescale.com/' },
@@ -65,7 +66,7 @@ export const process = [
           { link: 'https://www.dafont.com/' },
           { link: 'https://www.fontspace.com/' },
           { link: 'https://www.myfonts.com/WhatTheFont/' },
-          { link: 'https://www.fontspring.com/' },
+          { link: 'https://www.fontspring.com/' }
         ]
       },
       logo: {
