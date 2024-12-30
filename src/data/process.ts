@@ -113,6 +113,8 @@ export const process = [
       },
       icons: {
         where: [
+          {link: 'https://www.svgrepo.com/'},
+          { link: 'https://tablericons.com/' },
           { link: 'https://iconmonstr.com/' },
           { link: 'https://www.iconshock.com/' },
           { link: 'https://www.iconsdb.com/' },
@@ -121,7 +123,6 @@ export const process = [
           { link: 'https://www.iconscout.com/' },
           { link: 'https://www.icons8.com/' },
           { link: 'https://www.flaticon.com/' },
-          { link: 'https://tablericons.com/' },
           { link: 'https://thenounproject.com/' },
           { link: 'https://heroicons.com/' },
           { link: 'https://ionic.io/ionicons' },
