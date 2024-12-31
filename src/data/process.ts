@@ -57,6 +57,9 @@ export const process = [
           }
         ],
         where: [
+          {
+            link: 'https://fontshub.pro/'
+          },
           { link: 'https://textfonts.net/' },
           { link: 'https://www.fontmirror.com/' },
           { link: 'https://www.fontbrief.com/fontbrief' },
@@ -113,7 +116,7 @@ export const process = [
       },
       icons: {
         where: [
-          {link: 'https://www.svgrepo.com/'},
+          { link: 'https://www.svgrepo.com/' },
           { link: 'https://tablericons.com/' },
           { link: 'https://iconmonstr.com/' },
           { link: 'https://www.iconshock.com/' },
