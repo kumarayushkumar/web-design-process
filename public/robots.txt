@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://uidesignprocess.tech/sitemap.xml
+Sitemap: https://uidesignprocess.tech/sitemap-index.xml
