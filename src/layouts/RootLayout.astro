@@ -28,12 +28,12 @@ const { title } = Astro.props
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph (OG) Meta Tags -->
-    <meta name="og:site_name" content={CONST.name} />
-    <meta name="og:title" content={title} />
-    <meta name="og:type" content="website" />
-    <!-- <meta name="og:image" content={`https://www.${CONST.name}.com/logo.png`} /> -->
-    <meta name="og:url" content={`https://www.${CONST.domain}.com`} />
-    <meta name="og:description" content={CONST.description} />
+    <meta property="og:site_name" content={CONST.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:image" content={`https://www.${CONST.name}.com/logo.png`} /> -->
+    <meta property="og:url" content={`https://www.${CONST.domain}.com`} />
+    <meta property="og:description" content={CONST.description} />
 
     <!-- Twitter Card Meta Tag -->
     <meta name="twitter:card" content="summary_large_image" />
