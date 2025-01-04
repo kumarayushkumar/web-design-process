@@ -33,6 +33,7 @@ const { title } = Astro.props
     <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
     <!-- <meta property="og:image" content={`https://www.${CONST.name}.com/logo.png`} /> -->
+    <!-- <meta property="og:image:alt" content="Logo of UI Design Process" /> -->
     <meta property="og:url" content={`https://www.${CONST.domain}.com`} />
     <meta property="og:description" content={CONST.description} />
 
@@ -43,13 +44,14 @@ const { title } = Astro.props
 
     <!-- Apple Meta Tags -->
     <meta name="apple-mobile-web-app-title" content={CONST.name} />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /> -->
 
     <!-- <link rel="icon" type="image/png" href="/logo.png" /> -->
     <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico" /> -->
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="canonical" href="https://uidesignprocess.tech" />
   </head>
   <body class="min-h-screen">
     <slot />
